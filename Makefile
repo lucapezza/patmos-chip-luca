@@ -15,8 +15,13 @@
 # SPDX-License-Identifier: Apache-2.0
 MAKEFLAGS+=--warn-undefined-variables
 
+export PDK=sky130A
+export PDK_ROOT=$(PWD)/../dependencies/pdks
+OPENLANE_ROOT=$(PWD)/../dependencies/openlane_src
+
 export CARAVEL_ROOT?=$(PWD)/caravel
-PRECHECK_ROOT?=${HOME}/mpw_precheck
+PRECHECK_ROOT?=$(PWD)/../mpw_precheck
+#PRECHECK_ROOT?=${HOME}/mpw_precheck
 export MCW_ROOT?=$(PWD)/mgmt_core_wrapper
 SIM?=RTL
 
